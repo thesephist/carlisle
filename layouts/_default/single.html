@@ -5,7 +5,10 @@
     <div class="meta">
         <div class="meta-item date desktop" itemprop="datepublished">{{ .Date.Format "2 January 2006" }}</div>
         <div class="meta-item date mobile" itemprop="datepublished">{{ .Date.Format "2 Jan 2006" }}</div>
+
+        {{ if ne .Dir "/" }}
         <div class="meta-item readtime" itemprop="duration">{{ .ReadingTime }} min read</div>
+        {{ end }}
     </div>
 </div>
 <article>

@@ -35,12 +35,14 @@ footer {
 }
 
 main {
-    flex-grow: 1;
     flex-shrink: 0;
-    max-width: unset;
-    width: calc(100% - 32px);
-    margin-left: auto;
-    margin-right: auto;
+
+    /* paper feel */
+    width: calc(100% - 6em);
+    background: #fff;
+    padding: 0 1em;
+    margin: 0 auto;
+    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
 }
 
 a {
@@ -54,7 +56,6 @@ h2,
 h3 {
     font-weight: normal;
     line-height: 1.325em;
-    margin-top: 1.8em;
     padding-bottom: .125rem;
 }
 
@@ -107,7 +108,10 @@ p a {
 
 @media only screen and (min-width: 600px) {
     main {
-        max-width: 700px;
+        max-width: 780px;
+        /* paper feel */
+        margin: 2em auto;
+        padding: 0 2em;
     }
 
     h1,
@@ -123,6 +127,15 @@ p a {
 
     .mobile {
         display: none !important;
+    }
+}
+
+/* paper feel */
+@media only screen and (max-width: 760px) {
+    main {
+        margin: 0;
+        max-width: unset;
+        width: 100%;
     }
 }
 
@@ -146,7 +159,6 @@ nav {
 }
 
 header {
-    background: var(--background-default);
     height: 100px;
 }
 
@@ -162,7 +174,7 @@ nav a {
 /* FOOTER */
 
 footer {
-    height: 80px;
+    margin-top: 1em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -200,7 +212,6 @@ main {
 p img {
     margin: 1.5em 0;
     width: 100%;
-    max-width: 700px;
 }
 
 p img.blend-multiply {
@@ -210,7 +221,6 @@ p img.blend-multiply {
 @media only screen and (max-width: 600px) {
     p img {
         width: 100vw;
-        max-width: unset;
         position: relative;
         top: 0;
         left: -16px;
