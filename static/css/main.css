@@ -37,17 +37,14 @@ footer {
 main {
     flex-grow: 1;
     flex-shrink: 0;
-}
-
-a {
-    color: var(--foreground-default)
-}
-
-.overlay {
     max-width: unset;
     width: calc(100% - 32px);
     margin-left: auto;
     margin-right: auto;
+}
+
+a {
+    color: var(--foreground-default)
 }
 
 /* TYPOGRAPHY */
@@ -58,7 +55,6 @@ h3 {
     font-weight: normal;
     line-height: 1.325em;
     margin-top: 1.8em;
-    margin-bottom: 1em;
     padding-bottom: .125rem;
 }
 
@@ -110,7 +106,7 @@ p a {
 }
 
 @media only screen and (min-width: 600px) {
-    .overlay {
+    main {
         max-width: 700px;
     }
 
@@ -140,7 +136,7 @@ header a:hover {
     text-decoration: underline;
 }
 
-header .overlay,
+header,
 nav {
     display: flex;
     flex-direction: row;
@@ -165,7 +161,7 @@ nav a {
 
 /* FOOTER */
 
-footer .overlay {
+footer {
     height: 80px;
     display: flex;
     flex-direction: row;

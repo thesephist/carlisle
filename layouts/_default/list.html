@@ -1,26 +1,20 @@
 {{ define "main" }}
 
-<main aria-role="main">
-    <section class="hero">
-        <div class="overlay">
-            <h1>{{ .Title }}</h1>
-            <div class="tagline">{{ .Params.Tagline }}</div>
-            <article>
-                {{ .Content }}
-            </article>
-        </div>
-    </section>
+<section class="hero">
+    <h1>{{ .Title }}</h1>
+    <div class="tagline">{{ .Params.Tagline }}</div>
+    <article>
+        {{ .Content }}
+    </article>
+</section>
 
-    <section>
-        <div class="overlay postlist">
-            {{ range (.Pages.ByParam "order") }}
-            <p>
-                <span class="dateprefix">{{ .Date.Format "Jan '06"}}</span>
-                <a class="summaryLink" href="{{.Permalink}}">{{ .Title }}</a>
-            </p>
-            {{ end }}
-        </div>
-    </section>
-</main>
+<section class="postlist">
+    {{ range (.Pages.ByParam "order") }}
+    <p>
+        <span class="dateprefix">{{ .Date.Format "Jan '06"}}</span>
+        <a class="summaryLink" href="{{.Permalink}}">{{ .Title }}</a>
+    </p>
+    {{ end }}
+</section>
 
 {{ end }}

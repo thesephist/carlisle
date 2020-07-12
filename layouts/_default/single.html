@@ -1,37 +1,33 @@
 {{ define "main" }}
 
-<main aria-role="main">
-    <div class="hero inverted">
-        <div class="overlay">
-            <h1>{{ .Title }}</h1>
-        </div>
-        <div class="meta overlay">
-            <div class="meta-item date desktop" itemprop="datepublished">{{ .Date.Format "2 January 2006" }}</div>
-            <div class="meta-item date mobile" itemprop="datepublished">{{ .Date.Format "2 Jan 2006" }}</div>
-            <div class="meta-item readtime" itemprop="duration">{{ .ReadingTime }} min read</div>
-        </div>
+<div class="hero inverted">
+    <h1>{{ .Title }}</h1>
+    <div class="meta">
+        <div class="meta-item date desktop" itemprop="datepublished">{{ .Date.Format "2 January 2006" }}</div>
+        <div class="meta-item date mobile" itemprop="datepublished">{{ .Date.Format "2 Jan 2006" }}</div>
+        <div class="meta-item readtime" itemprop="duration">{{ .ReadingTime }} min read</div>
     </div>
-    <article class="overlay">
-        {{ .Content }}
+</div>
+<article>
+    {{ .Content }}
 
-        {{ if ne .Dir "/" }}
-        <hr/>
-        <p>
-            If you enjoyed this piece, you might also enjoy
-            {{ if .NextInSection }}
-            my next post,
-            <a href="{{ .NextInSection.Permalink }}"><em>{{ .NextInSection.Title }}</em></a>.
+    {{ if ne .Dir "/" }}
+    <hr/>
+    <p>
+        If you enjoyed this piece, you might also enjoy
+        {{ if .NextInSection }}
+        my next post,
+        <a href="{{ .NextInSection.Permalink }}"><em>{{ .NextInSection.Title }}</em></a>.
+        {{ else }}
+            {{ if .PrevInSection }}
+            my previous post,
+            <a href="{{ .PrevInSection.Permalink }}"><em>{{ .PrevInSection.Title }}</em></a>.
             {{ else }}
-                {{ if .PrevInSection }}
-                my previous post,
-                <a href="{{ .PrevInSection.Permalink }}"><em>{{ .PrevInSection.Title }}</em></a>.
-                {{ else }}
-                other posts on the site. Read more on the <a href="/posts/">posts page</a>.
-                {{ end }}
+            other posts on the site. Read more on the <a href="/posts/">posts page</a>.
             {{ end }}
-        </p>
         {{ end }}
-    </article>
-</main>
+    </p>
+    {{ end }}
+</article>
 
 {{ end }}

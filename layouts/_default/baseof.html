@@ -23,12 +23,14 @@
 </head>
 
 <body class="type-{{ .Kind }}">
-    {{ partial "header.html" }}
+    <main aria-role="main">
+        {{ partial "header.html" }}
 
-    {{ block "main" . }}
-    {{ end }}
+        {{ block "main" . }}
+        {{ end }}
 
-    {{ partial "footer.html" }}
+        {{ partial "footer.html" }}
+    </main>
 </body>
 
 </html>
