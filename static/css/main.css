@@ -224,6 +224,7 @@ p img.blend-multiply {
 }
 
 pre, code {
+    color: var(--foreground-default);
     font-family: var(--font-mono);
 }
 
