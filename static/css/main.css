@@ -4,9 +4,8 @@ body {
     padding: 0;
     box-sizing: border-box;
 
-    --font-sans: system-ui, 'Helvetica', 'Arial', sans-serif;
-    --font-serif: 'Georgia', 'Times New Roman', serif;
-    --font-mono: 'Menlo', 'Monaco', monospace;
+    --font-serif: 'IBM Plex Serif', 'Times New Roman', serif;
+    --font-mono: 'IBM Plex Mono', 'Menlo', 'Monaco', monospace;
 
     /* default light-mode colors */
     --foreground-default: #222;
@@ -21,7 +20,7 @@ html {
 }
 
 body {
-    font-family: var(--font-sans);
+    font-family: var(--font-serif);
     color: var(--foreground-default);
     background: var(--background-default);
     display: flex;
@@ -135,7 +134,6 @@ p a {
 
 header a {
     text-decoration: none;
-    font-size: 1.125rem;
 }
 
 header a:hover {
