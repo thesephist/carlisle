@@ -135,7 +135,7 @@ p a {
     main {
         margin: 0;
         max-width: unset;
-        width: 100%;
+        width: calc(100% - 2em);
         background: initial;
         box-shadow: none;
     }
