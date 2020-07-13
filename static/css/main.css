@@ -39,9 +39,9 @@ main {
 
     /* paper feel */
     width: calc(100% - 6em);
-    background: #fff;
     padding: 0 1em;
     margin: 0 auto;
+    background: #fff;
     box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
 }
 
@@ -136,6 +136,8 @@ p a {
         margin: 0;
         max-width: unset;
         width: 100%;
+        background: initial;
+        box-shadow: none;
     }
 }
 
