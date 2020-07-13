@@ -1,4 +1,4 @@
-# Carlisle
+# Carlisle ✨
 
 Carlisle is a minimal template for a Hugo site. Carlisle is the basis for my custom theme mostly shared across
 
@@ -6,6 +6,8 @@ Carlisle is a minimal template for a Hugo site. Carlisle is the basis for my cus
 - [linus.coffee](https://linus.coffee)
 - [atypicalpress.com](https://atypicalpress.com)
 - [COVID Hacks](https://covidhacks.io)
+
+![Carlisle sample](https://repository-images.githubusercontent.com/279123616/89ca9d00-c47b-11ea-887d-3921387bbac3)
 
 Carlisle can be easily deployed on [Vercel](https://vercel.com/guides/deploying-hugo-with-vercel). Check out the live demo at [carlisle.thesephist.vercel.app](https://carlisle.thesephist.vercel.app).
 
