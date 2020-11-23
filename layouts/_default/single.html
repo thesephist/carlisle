@@ -17,18 +17,18 @@
     {{ if ne .Dir "/" }}
     <hr/>
     <p>
-        If you enjoyed this piece, you might also enjoy
-        {{ if .NextInSection }}
-        my next post,
-        <a href="{{ .NextInSection.Permalink }}"><em>{{ .NextInSection.Title }}</em></a>.
-        {{ else }}
+        <p class="prevInSection">
             {{ if .PrevInSection }}
-            my previous post,
-            <a href="{{ .PrevInSection.Permalink }}"><em>{{ .PrevInSection.Title }}</em></a>.
-            {{ else }}
-            other posts on the site. Read more on the <a href="/posts/">posts page</a>.
+            &larr;
+            <a href="{{ .PrevInSection.Permalink }}"><em>{{ .PrevInSection.Title }}</em></a>
             {{ end }}
-        {{ end }}
+        </p>
+        <p class="nextInSection">
+            {{ if .NextInSection }}
+            <a href="{{ .NextInSection.Permalink }}"><em>{{ .NextInSection.Title }}</em></a>
+            &rarr;
+            {{ end }}
+        </p>
     </p>
     {{ end }}
 </article>

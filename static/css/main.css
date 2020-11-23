@@ -175,6 +175,14 @@ nav a {
 
 /* FOOTER */
 
+.prevInSection {
+    text-align: left;
+}
+
+.nextInSection {
+    text-align: right;
+}
+
 footer {
     margin-top: 1em;
     display: flex;
